@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "left right" 1fr / 1fr auto;
+}
+
+#main > #left {
+  font-size: 24px;
+}
+
+#main > #left > .achive_type > .title {
+  font-family: cursive;
+  padding: .5em;
+}
+
+#main > #left > .achive_type > .container {
+  padding: 1em;
+  padding-top: 0;
+  display: flex;
+}
+
+#main > #left > .achive_type > .container > .achive {
+  margin: .2em;
+  padding: .2em;
+  border-radius: .2em;
+}
+
+#main > #left > .achive_type > .container > .achive:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+#main > #left > .achive_type > .container > .achive.selected {
+  background: #aaa;
+}
+
+#main > #right {
+  border-left: solid 8px;
+  width: 256px;
+  position: relative;
+  font-size: 18px;
+}
+
+#main > #right > #achive_thumnail {
+  display: block;
+  position: relative;
+  left: 0; right: 0;
+  margin: 64px auto;
+}
+
+#main > #right > #achive_title {
+  font-size: 1.3em;
+  padding: 0.3em;
+}
+
+#main > #right > #achive_description {
+  padding: 0.3em;
+}
+
+
+
