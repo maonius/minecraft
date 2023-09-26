@@ -1,6 +1,7 @@
 const ACHIVEMENT_DATA = [
   {
     "id": "achive1",
+    "type": "minecraft",
     "icon": {"x": 12, "y": 3},
     "thumnail": {"x": 1, "y": 0},
     "title": "持ち物ゲット",
@@ -9,6 +10,7 @@ const ACHIVEMENT_DATA = [
     "gold": "10",
   },{
     "id": "achive2",
+    "type": "minecraft",
     "icon": {"x": 8, "y": 1},
     "thumnail": {"x": 2, "y": 0},
     "title": "木を手に入れよう",
@@ -17,6 +19,7 @@ const ACHIVEMENT_DATA = [
     "gold": "10",
   },{
     "id": "achive3",
+    "type": "minecraft",
     "icon": {"x": 11, "y": 0},
     "thumnail": {"x": 3, "y": 0},
     "title": "土台作り",
