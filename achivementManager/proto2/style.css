@@ -1,4 +1,4 @@
-* {
+*{
   margin: 0;
   padding: 0;
 }
@@ -8,7 +8,7 @@
   grid-template:
     "header header" auto
     "list   info  " 1fr
-    / 1fr auto;
+    /1fr    auto;
   width: 100vw;
   height: 100vh;
 }
@@ -17,16 +17,13 @@
   grid-area: header;
   padding: 24px;
   font-size: 30px;
+  border-bottom: solid 1px black;
 }
 
 #main > #achivelist {
   grid-area: list;
   padding: 24px;
   overflow: scroll;
-}
-
-#main > #achivelist > div {
-  padding-bottom: 20px;
 }
 
 #main > #achivelist > div > .title {
@@ -42,46 +39,39 @@
 #main > #achivelist > div > .container > .achive {
   margin: 0 auto;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
+  transition-duration: .3s;
+}
+#main > #achivelist > div > .container > .achive.selected {
+  background: #aaa;
+}
+#main > #achivelist > div > .container > .achive:hover {
+  transform: scale(1.1);
 }
 
 #main > #achiveinfo {
+  width: 256px;
   grid-area: info;
-  padding: 24px;
-  position: relative;
+  
 }
 
 #main > #achiveinfo > #achive_thumnail {
   position: relative;
-  margin: 20px auto;
+  margin: 32px auto;
   left: 0; right: 0;
   display: block;
 }
 
-#main > #achiveinfo > #achive_title {
-  padding: 16px;
-}
-
-#main > #achiveinfo > #achive_description {
-  padding: 16px;
-}
-
-#main > #achiveinfo > #achive_detail {
-  padding: 16px;
-}
-
 #main > #achiveinfo > #achive_button {
-  width: 128px;
-  margin: 0 auto;
-  padding: .3em;
-  border-radius: .3em;
+  position: relative;
+  margin: 32px auto;
+  left: 0; right: 0;
+  width: 10em;
   text-align: center;
-
-  background: #d88;
+  padding: 0.3em;
 }
 
 #main > #achiveinfo > #achive_button.unlocked {
-  background: #8d8;
+  
 }
-
 

@@ -7,7 +7,7 @@ window.onclick = function (e) {
   mainClass.onclick(e);
 }
 
-window.onkeydown = function (e) {
-  mainClass.onkeydown(e);
+// doesn't work
+window.ondblclick = function (e) {
+  mainClass.onclick(e);
 }
-
