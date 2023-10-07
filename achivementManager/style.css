@@ -82,6 +82,7 @@ body { overflow: hidden; }
 	width: 100%;
 	top: 0;
 	position: absolute;
+  user-select: none;
 }
 #main > #mainAchiveList > .achiveClass >
 	.classContainer > .achivement > .check {
@@ -147,4 +148,34 @@ body { overflow: hidden; }
 	width: 256px;
 }
 
+#main > #mainAchiveInfo > * {
+  margin: 1em;
+}
+
+#main > #mainAchiveInfo > #achiveImage,
+#main > #mainAchiveInfo > #achiveButton {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main > #mainAchiveInfo > #achiveTitle {
+  font-size: 1.2em;
+}
+
+#main > #mainAchiveInfo > #achiveButton {
+  border-radius: .5em;
+  background: #4a4;
+  text-align: center;
+  padding: .5em;
+  width: 8em;
+  transition-duration: .3s;
+  user-select: none;
+}
+#main > #mainAchiveInfo > #achiveButton.unlocked {
+  background: #a44;
+}
+
+#main > #mainAchiveInfo > #achiveButton:hover {
+  transform: scale(1.1);
+}
 
