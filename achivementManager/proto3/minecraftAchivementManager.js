@@ -1,6 +1,7 @@
 class MinecraftAchivement {
-  constructor (achi_data)
+  constructor (achi_data, parent)
   {
+    this.parent = parent;
     this.setAchiveData(achi_data);
   }
   setAchiveData(achi_data)
@@ -33,6 +34,19 @@ class MinecraftAchivement {
     this.can = can;
     elm.appendChild(can);
     pelm.appendChild(elm);
+    
+    // add event listener
+    let self = this;
+    can.addEventListener('dblclick',
+      () => self.dblclick()
+    );
+  }
+  dblclick()
+  {
+    this.changeStatus();
+    if (this.parent.selectedAchive == this) {
+      this.parent.setButtunAsUnlocked(this.unlocked);
+    }
   }
   setImageData(imag_data)
   {
@@ -97,7 +111,7 @@ class MinecraftAchivementManager {
     this.achives = [];
     for (let i in ACHIVEMENT_DATA) {
       let achi_data = ACHIVEMENT_DATA[i];
-      let achive = new MinecraftAchivement(achi_data);
+      let achive = new MinecraftAchivement(achi_data, this);
       this.achives.push(achive);
     }
   }
@@ -115,7 +129,6 @@ class MinecraftAchivementManager {
         img: document.getElementById('icon_imag')
       },
     };
-
   }
   initializeElement()
   {
@@ -163,7 +176,12 @@ class MinecraftAchivementManager {
   }
   selectAchive(achive)
   {
+    if (this.selectedAchive) {
+      
+      this.selectedAchive.elm.classList.remove('selected');
+    }
     this.selectedAchive = achive;
+    this.selectedAchive.elm.classList.add('selected');
     let can = this.info_can;
     can.width  = achive.can_w;
     can.height = achive.can_h;

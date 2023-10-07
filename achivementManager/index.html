@@ -2,27 +2,52 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>minecraft achivement manager</title>
+  <title>Minecraft Achivement Manager</title>
+  <link rel="icon" href="tamanaftah.ico">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-  <div id="main">
-    <header class="header">
+  <div id="main" class="dark">
+    <div id="mainHeader">
+      <i class="fa-solid fa-cube"></i>
       <div id="headerTitle">Minecraft Achivement Manager</div>
-    </header>
-    <div id="achivelist"></div>
-    <div id="achiveinfo">
-      <canvas id="achive_thumnail"></canvas>
-      <div id="achive_title" ></div>
-      <div id="achive_description"></div>
-      <div id="achive_detail"></div>
-      <div id="achive_button"></div>
+      <i id="themeButton"   class="btn fa-solid fa-circle-half-stroke"></i>
+      <i id="settingButton" class="btn fa-solid fa-gear"></i>
+      <i id="accoundButton" class="btn fa-solid fa-user"></i>
+      <i id="cafeButton"    class="btn fa-solid fa-mug-saucer"></i>
+    </div>
+    <div id="mainAchiveList">
+      <div class="achiveClass" id="allAchives">
+        <div class="classTitle"></div>
+        <div class="classContainer" id="allAchives"></div>
+      </div>
+    </div>
+    <div id="mainVerticalBar"></div>
+    <div id="mainAchiveInfo">
+      <div id="achiveImage"></div>
+      <div id="achiveTitle"></div>
+      <div id="achiveDescription"></div>
+      <div id="achiveDetail"></div>
+      <div id="achiveButton"></div>
     </div>
   </div>
-
-  <img id="thum_imag" style="display: none;" src="thumbnail.png">
-  <img id="icon_imag" style="display: none;" src="icon.png">
-  <script src="data.js"></script>
-  <script src="minecraftAchivementManager.js"></script>
-  <script src="main.js"></script>
+  
+  <div class="source">
+    <img src="thumbnail.png" id="thumbnail">
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </div>
 </body>
+</html>
